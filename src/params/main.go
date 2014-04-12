@@ -38,10 +38,9 @@ func intSeq(p ...string) func() (string, int) {
 	}
 }
 
-func main(params...interface{}) {
+func main(params ...interface{}) {
 	nextInt := intSeq("Mi Seq1", "1", "2")
 
-	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 	fmt.Println(nextInt())
 
@@ -50,10 +49,12 @@ func main(params...interface{}) {
 
 	newInts2 := intSeq()
 	n, i := newInts2()
-	fmt.Printf("-- %s %d", n, i)
+	fmt.Printf("-- %s %d\n", n, i)
 
 }
 
-func Main(params...interface{}){
+func Main(params ...interface{}) {
+	fmt.Println("params.Main BEGIN")
 	main(params)
+	fmt.Println("params.Main END")
 }
