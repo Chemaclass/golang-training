@@ -1,12 +1,14 @@
 package main
 
 import (
-	"fmt"
+	//"fmt"
+	"even"
 	"params"
 )
 
 func main() {
-	fmt.Println("main BEGIN")
+
 	params.Main()
-	fmt.Println("main END")
+	even.Main(1, 2, 72)
+
 }
