@@ -7,6 +7,7 @@ import (
 	"params"
 	"sum"
 	"obj1"
+	"commands"
 )
 
 func main() {
@@ -22,4 +23,5 @@ func main() {
 	}
 	//Args end
 	obj1.Main()
+	commands.Main()
 }
