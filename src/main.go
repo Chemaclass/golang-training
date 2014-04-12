@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"params"
 	"sum"
+	"obj1"
 )
 
 func main() {
@@ -19,7 +20,6 @@ func main() {
 	for _, i := range a {
 		fmt.Printf("> %s\n", i)
 	}
-	fmt.Printf(">> %s", flag.Arg(0))
 	//Args end
-
+	obj1.Main()
 }
