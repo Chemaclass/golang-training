@@ -5,7 +5,17 @@ import (
 )
 
 func main() {
-	e2()
+	e3()
+}
+
+// Maps
+func e3() {
+	//var x map[string]int
+	x := make(map[string]int)
+	x["key"] = 10
+	fmt.Println(x)
+	delete(x, "key")
+	fmt.Println(x)
 }
 
 // Copy slice
