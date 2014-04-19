@@ -5,7 +5,23 @@ import (
 )
 
 func main() {
-	e3()
+	e4()
+}
+
+// Maps2
+func e4() {
+	e := make(map[string]string)
+	e["H"] = "Hydrogen"
+	e["He"] = "Helium"
+	e["Li"] = "Lithium"
+	e["Be"] = "Beryllium"
+	e["B"] = "Boron"
+	e["C"] = "Carbon"
+	e["N"] = "Nitrogen"
+
+	if name, ok := e["Un"]; ok {
+		fmt.Println(name, ok)
+	}
 }
 
 // Maps
