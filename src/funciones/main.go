@@ -5,8 +5,19 @@ import (
 )
 
 func main() {
-	e2()
+	e3()
+}
 
+//Recursion
+func e3() {
+	fmt.Printf("factorial:  %d", factorial(8))
+}
+
+func factorial(x uint) uint {
+	if x == 0 {
+		return 1
+	}
+	return x * factorial(x-1)
 }
 
 //Closure
