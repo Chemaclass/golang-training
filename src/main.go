@@ -3,16 +3,23 @@ package main
 import (
 	"commands"
 	"even"
+	"fibonacci"
 	"flag"
 	"fmt"
 	"obj1"
 	"params"
 	"sum"
-	"fibonacci"
 )
 
 func main() {
-	fibonacci.Main()
+	doScanExcample()
+}
+
+func doScanExcample() {
+	var name string
+	fmt.Print("What's your name? ")
+	fmt.Scanf("%s", &name)
+	fmt.Printf("Hello %s\n", name)
 }
 
 func act1() {
@@ -28,4 +35,5 @@ func act1() {
 	//Args end
 	obj1.Main()
 	commands.Main()
+	fibonacci.Main()
 }
