@@ -5,7 +5,28 @@ import (
 )
 
 func main() {
-	e3()
+	e5()
+}
+
+//Defer, Panic y Recover
+func e5() {
+	defer func(){
+		str := recover()
+		fmt.Println(str)
+	}()
+	panic("PANIC")
+}
+
+//Defer
+func e4() {
+	f := func() {
+		fmt.Println("1st")
+	}
+	s := func() {
+		fmt.Println("2nd")
+	}
+	defer s()
+	f()
 }
 
 //Recursion
