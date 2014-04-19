@@ -5,10 +5,28 @@ import (
 )
 
 func main() {
-	e1()
+	e2()
 
 }
 
+//Closure
+func e2() {
+	siguientePar := generadorPares()
+	fmt.Println(siguientePar()) //0
+	fmt.Println(siguientePar()) //2
+	fmt.Println(siguientePar()) //4
+}
+
+func generadorPares() func() uint {
+	i := uint(0)
+	return func() (ret uint) {
+		ret = i
+		i += 2
+		return
+	}
+}
+
+//Calcular la media
 func e1() {
 	media := func(xs []float64) float64 {
 		total := 0.0
