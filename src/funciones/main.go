@@ -5,7 +5,21 @@ import (
 )
 
 func main() {
-	e6()
+	e7()
+}
+
+// Fibo
+func e7() {
+	fib := func(n int) []int {
+		l := make([]int, n)
+		l[0], l[1] = 1, 1
+		for i := 2; i < n; i++ {
+			l[i] = l[i-1] + l[i-2]
+		}
+		return l
+	}
+	l := fib(25)
+	fmt.Printf("fib: %v", l)
 }
 
 // Creamos un generador de números impares
