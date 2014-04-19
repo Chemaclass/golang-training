@@ -5,7 +5,9 @@ import (
 )
 
 func main() {
-	e7()
+	//e7()
+	x := [6]string{"a", "b", "c", "d", "e", "f"}
+	fmt.Println(x[2:5])
 }
 
 /*Write a program that finds the smallest number in the list*/

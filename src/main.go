@@ -2,10 +2,19 @@ package main
 
 import (
 	"fmt"
-	"listas"	
+	"funciones"
+	"listas"
 )
 
 func main() {
+	doFunciones()
+}
+
+func doFunciones() {
+	funciones.Main()
+}
+
+func doListas() {
 	listas.Main()
 }
 
