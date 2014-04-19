@@ -4,10 +4,15 @@ import (
 	"fmt"
 	"funciones"
 	"listas"
+	"pointers"
 )
 
 func main() {
-	doFunciones()
+	doPointers()
+}
+
+func doPointers() {
+	pointers.Main()
 }
 
 func doFunciones() {
