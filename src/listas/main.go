@@ -5,7 +5,20 @@ import (
 )
 
 func main() {
-	e6()
+	e7()
+}
+
+/*Write a program that finds the smallest number in the list*/
+func e7() {
+	l := []int{48, 98, 15, 63, 47, 22, 9, 19, 97, 17}
+	var min int = l[0]
+	for _, value := range l {
+
+		if value < min {
+			min = value
+		}
+	}
+	fmt.Printf("Min is %d", min)
 }
 
 // Maps4
