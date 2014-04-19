@@ -5,12 +5,28 @@ import (
 )
 
 func main() {
-	e5()
+	e6()
+}
+
+// Creamos un generador de números impares
+func e6() {
+	generadorImpares := func() func() int {
+		i := 1
+		return func() (r int) {
+			r = i
+			i += 2
+			return
+		}
+	}
+	siguienteImpar := generadorImpares()
+	fmt.Println(siguienteImpar())
+	fmt.Println(siguienteImpar())
+	fmt.Println(siguienteImpar())
 }
 
 //Defer, Panic y Recover
 func e5() {
-	defer func(){
+	defer func() {
 		str := recover()
 		fmt.Println(str)
 	}()
