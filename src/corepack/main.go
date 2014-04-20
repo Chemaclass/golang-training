@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	doServerHttp()
+	doServerRpc()
 }
 
 func doErrors(){

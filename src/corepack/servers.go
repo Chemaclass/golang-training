@@ -8,7 +8,7 @@ import (
 
 func serverDoMain() {
 	fmt.Println("serverDoMain")
-	go server()
+	go serverTcp()
 	go client()
 	
 	var input string
@@ -44,7 +44,7 @@ func handleServerConnection(c net.Conn) {
 	}
 }
 
-func server() {
+func serverTcp() {
 	//listen on a port
 	ln, err := net.Listen("tcp", ":9999")
 	if err != nil {
