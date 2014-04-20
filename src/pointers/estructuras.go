@@ -9,6 +9,12 @@ type MultiFormas struct {
 	Formas []Forma
 }
 
+func (m *MultiFormas) Add(a ...Forma) {
+	for _, v := range a {
+		m.Formas = append(m.Formas, v)
+	}
+}
+
 func (m *MultiFormas) Area() float64 {
 	var area float64
 	for _, s := range m.Formas {

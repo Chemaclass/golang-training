@@ -12,7 +12,9 @@ func e4() {
 	c := &Circulo{1, 2, 3}
 	r := &Rectangulo{1, 2}
 	l := new(MultiFormas)
-	l.Formas = append(l.Formas, c, r)
+	// Refactorizo y creo el método Add()
+	// l.Formas = append(l.Formas, c, r)
+	l.Add(c, r)
 	a := l.Area()
 	fmt.Println("area total: ", a)
 }
