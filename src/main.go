@@ -5,11 +5,16 @@ import (
 	"fmt"
 	"funciones"
 	"listas"
+	"mtest"
 	"pointers"
 )
 
 func main() {
-	doConcurrency()
+	doTest()
+}
+
+func doTest() {
+	mtest.Main()
 }
 
 func doConcurrency() {
