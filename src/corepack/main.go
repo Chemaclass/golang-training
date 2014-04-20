@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	doServerRpc()
+	doCommandLine()
 }
 
 func doErrors(){
