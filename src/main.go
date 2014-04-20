@@ -7,10 +7,15 @@ import (
 	"listas"
 	"mtest"
 	"pointers"
+	"corepack"
 )
 
 func main() {
-	doTest()
+	doCorePack()
+}
+
+func doCorePack(){
+	corepack.Main()
 }
 
 func doTest() {
