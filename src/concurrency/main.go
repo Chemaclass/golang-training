@@ -11,17 +11,17 @@ func main() {
 }
 
 func e2() {
-	pinger := func(c chan string) {
+	pinger := func(c chan <- string) {
 		for i := 0; ; i++ {
 			c <- "ping"
 		}
 	}
-	ponger := func(c chan string) {
+	ponger := func(c chan <- string) {
 		for i:=0;; i++ {
 			c <- "pong"
 		}
 	}
-	printer := func(c chan string) {
+	printer := func(c <- chan string) {
 		for {
 			msg := <-c
 			fmt.Println(msg)
