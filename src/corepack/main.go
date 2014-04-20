@@ -2,17 +2,31 @@ package corepack
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
 	"strings"
-	"io/ioutil"
 )
 
 func main() {
-	doCreateFile()
-	doIOCorto()
+	doLeerDir()
 }
 
-func doCreateFile(){
+func doLeerDir() {
+	dir, err := os.Open(".")
+	if err != nil {
+		return
+	}
+	defer dir.Close()
+	fileInfos, err := dir.Readdir(-1)
+	if err != nil {
+		return
+	}
+	for _, fi := range fileInfos {
+		fmt.Println(fi.Name())
+	}
+}
+
+func doCreateFile() {
 	file, err := os.Create("../test.txt")
 	if err != nil {
 		return
@@ -26,7 +40,7 @@ func doIOCorto() {
 	if err != nil {
 		return
 	}
-	str := string (bs)
+	str := string(bs)
 	fmt.Println(str)
 }
 
