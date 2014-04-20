@@ -5,7 +5,16 @@ import (
 )
 
 func main() {
-	e3()
+	e4()
+}
+
+func e4() {
+	c := &Circulo{1, 2, 3}
+	r := &Rectangulo{1, 2}
+	l := new(MultiFormas)
+	l.Formas = append(l.Formas, c, r)
+	a := l.Area()
+	fmt.Println("area total: ", a)
 }
 
 func e3() {

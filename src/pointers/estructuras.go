@@ -1,6 +1,25 @@
 package pointers
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+type MultiFormas struct {
+	Formas []Forma
+}
+
+func (m *MultiFormas) Area() float64 {
+	var area float64
+	for _, s := range m.Formas {
+		area += s.Area()
+	}
+	return area
+}
+
+type Forma interface {
+	Area() float64
+}
 
 type Rectangulo struct {
 	alto, ancho float64
@@ -15,9 +34,9 @@ func (r *Rectangulo) Area() float64 {
 }
 
 type Circulo struct {
-	x, y, z float64
+	p1, p2, r float64
 }
 
-func (self Circulo) String() string {
-	return fmt.Sprintf("Cir{ x:%.2f, y:%.2f, z:%.2f}\n", self.x, self.y, self.z)
+func (c *Circulo) Area() float64 {
+	return math.Pi * (c.r * c.r)
 }
