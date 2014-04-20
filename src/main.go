@@ -1,6 +1,7 @@
 package main
 
 import (
+	"concurrency"
 	"fmt"
 	"funciones"
 	"listas"
@@ -8,9 +9,12 @@ import (
 )
 
 func main() {
-	doPointers()
+	doConcurrency()
 }
 
+func doConcurrency() {
+	concurrency.Main()
+}
 func doPointers() {
 	pointers.Main()
 }
@@ -27,5 +31,5 @@ func doScanExcample() {
 	var name string
 	fmt.Print("What's your name? ")
 	fmt.Scanf("%s", &name)
-	fmt.Printf("Hello %s\n", name)	
+	fmt.Printf("Hello %s\n", name)
 }
