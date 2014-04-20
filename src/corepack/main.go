@@ -2,11 +2,51 @@ package corepack
 
 import (
 	"fmt"
+	"os"
 	"strings"
+	"io/ioutil"
 )
 
 func main() {
-	e1()
+	doIOCorto()
+}
+
+
+func doIOCorto() {
+	bs, err := ioutil.ReadFile("test.txt")
+	if err != nil {
+		return
+	}
+	str := string (bs)
+	fmt.Println(str)
+}
+
+func doIO() {
+	file, err := os.Open("test.txt")
+	if err != nil {
+		fmt.Println("error a> ", err)
+		//handle the error here
+		return
+	}
+	defer file.Close()
+
+	//get the file size
+	stat, err := file.Stat()
+	if err != nil {
+		fmt.Println("error b> ", err)
+		return
+	}
+
+	//read the file
+	bs := make([]byte, stat.Size())
+	_, err = file.Read(bs)
+	if err != nil {
+		fmt.Println("error c> ", err)
+		return
+	}
+
+	str := string(bs)
+	fmt.Println(str)
 }
 
 func e1() {
@@ -44,5 +84,6 @@ func doStrings() {
 }
 
 func Main() {
+	fmt.Println("corepack.Main()")
 	main()
 }
