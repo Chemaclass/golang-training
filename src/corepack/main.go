@@ -4,13 +4,23 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"strings"
 )
 
 func main() {
-	doLeerDir()
+	doLeerConWalk()
 }
 
+//Recorre toda la estructura de forma recursiva
+func doLeerConWalk() {
+	filepath.Walk(".", func(path string, info os.FileInfo, err error) error {
+		fmt.Println(path)
+		return nil
+	})
+}
+
+//Leer un directorio
 func doLeerDir() {
 	dir, err := os.Open(".")
 	if err != nil {
