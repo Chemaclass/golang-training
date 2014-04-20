@@ -5,12 +5,18 @@ import (
 )
 
 func main() {
-	e2()
+	e3()
+}
+
+func e3() {
+	a := new(Android)
+	a.Nombre = "Chema"
+	a.Saludar()
 }
 
 //Struct and Interfaces
 func e2() {
-	r := Rectangulo{alto:10, ancho: 4}
+	r := Rectangulo{alto: 10, ancho: 4}
 	fmt.Printf("%s", r)
 	fmt.Printf("Area del rect %.2f\n", r.Area())
 	c := Circulo{1.23, 4.56, 7.89}

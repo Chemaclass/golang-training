@@ -3,14 +3,14 @@ package pointers
 import "fmt"
 
 type Rectangulo struct {
-	  alto, ancho float64
+	alto, ancho float64
 }
 
 func (self Rectangulo) String() string {
-	return fmt.Sprintf("Rect{ alto:%.2f, ancho:%.2f}\n", self.alto,self.ancho)
+	return fmt.Sprintf("Rect{ alto:%.2f, ancho:%.2f}\n", self.alto, self.ancho)
 }
 
-func (r *Rectangulo) Area() float64 {	
+func (r *Rectangulo) Area() float64 {
 	return r.alto * r.ancho
 }
 
