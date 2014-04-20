@@ -3,11 +3,15 @@ package pointers
 import "fmt"
 
 type Rectangulo struct {
-	x1, x2, y1, y2 float64
+	  alto, ancho float64
 }
 
 func (self Rectangulo) String() string {
-	return fmt.Sprintf("Rect{ x1:%.2f, x2:%.2f, y1:%.2f, y2:%.2f}\n", self.x1, self.x2, self.y1, self.y2)
+	return fmt.Sprintf("Rect{ alto:%.2f, ancho:%.2f}\n", self.alto,self.ancho)
+}
+
+func (r *Rectangulo) Area() float64 {	
+	return r.alto * r.ancho
 }
 
 type Circulo struct {

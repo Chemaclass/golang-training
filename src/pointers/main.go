@@ -10,8 +10,9 @@ func main() {
 
 //Struct and Interfaces
 func e2() {
-	r := Rectangulo{1, 2, 3, 4}
+	r := Rectangulo{alto:10, ancho: 4}
 	fmt.Printf("%s", r)
+	fmt.Printf("Area del rect %.2f\n", r.Area())
 	c := Circulo{1.23, 4.56, 7.89}
 	fmt.Printf("%s", c)
 }
