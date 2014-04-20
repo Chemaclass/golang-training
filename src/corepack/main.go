@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	serverDoMain()
+	doServerHttp()
 }
 
 func doErrors(){
