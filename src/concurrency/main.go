@@ -16,6 +16,11 @@ func e2() {
 			c <- "ping"
 		}
 	}
+	ponger := func(c chan string) {
+		for i:=0;; i++ {
+			c <- "pong"
+		}
+	}
 	printer := func(c chan string) {
 		for {
 			msg := <-c
@@ -26,6 +31,7 @@ func e2() {
 
 	c := make(chan string)
 	go pinger(c)
+	go ponger(c)
 	go printer(c)
 
 	var input string
