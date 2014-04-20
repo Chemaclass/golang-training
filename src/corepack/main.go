@@ -6,10 +6,16 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"errors"
 )
 
 func main() {
-	doLeerConWalk()
+	doContenedores()
+}
+
+func doErrors(){
+	err := errors.New("error message")
+	err.Error()
 }
 
 //Recorre toda la estructura de forma recursiva
