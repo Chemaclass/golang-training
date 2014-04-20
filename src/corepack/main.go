@@ -8,12 +8,21 @@ import (
 )
 
 func main() {
+	doCreateFile()
 	doIOCorto()
 }
 
+func doCreateFile(){
+	file, err := os.Create("../test.txt")
+	if err != nil {
+		return
+	}
+	defer file.Close()
+	file.WriteString("test\n")
+}
 
 func doIOCorto() {
-	bs, err := ioutil.ReadFile("test.txt")
+	bs, err := ioutil.ReadFile("../test.txt")
 	if err != nil {
 		return
 	}
