@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	doContenedores()
+	hashesDoMain()
 }
 
 func doErrors(){
