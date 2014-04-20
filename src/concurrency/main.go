@@ -30,9 +30,11 @@ func e3() {
 		for {
 			select {
 			case msg1 := <-c1:
-				fmt.Println("<-c1|", msg1)
+				fmt.Println("Mensaje 1", msg1)
 			case msg2 := <-c2:
-				fmt.Println("<-c2|", msg2)
+				fmt.Println("Mensaje 2", msg2)
+			case <-time.After(time.Second * 1):
+				fmt.Println("timeout")
 			}
 		}
 	}()
