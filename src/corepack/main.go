@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	hashesDoMain()
+	serverDoMain()
 }
 
 func doErrors(){
